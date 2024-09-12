@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>GAMECONNECTSHOP</title>
+</head>
+<body>
+    <header>
+        <a href="#inicio" class="logo">
+            <img src="imagenes/game.png" alt="logo de la marca">
+            <h2 class="saludo">Bienvenido a nuestra tienda online.</h2>
+        </a>
+        <nav>
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a>
+    
+            <!-- Menú desplegable -->
+            <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Secciones</a>
+                <div class="dropdown-menu">
+                    <a href="#catalog-section">Catálogo de Juegos</a>
+                    <a href="#rewards-section">Recompensas y Promociones</a>
+                </div>
+            </div>
+    
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+    </header>
+    
+    <!-- Formulario de Inicio de Sesión -->
+    <div class="container" id="login-section">
+        <div class="login-form">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" id="username" placeholder="Nombre de usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button onclick="login()">Ingresar</button>
+        </div>
+    </div>
+
+    <!-- Sección de Inicio con Video -->
+    <section id="inicio" style="display: none;">
+        <video src="videos/141675-778335011_small.mp4" width="900" height="500" loop controls autoplay></video>
+    </section>
+    
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros" style="display: none;">
+        <h2>Sobre Nosotros</h2>
+        <p>Nuestra tienda fue fundada con la misión de ofrecer la mejor selección de videojuegos para todas las plataformas. Desde nuestros comienzos, hemos trabajado para construir una comunidad de jugadores y ofrecer promociones que premian la lealtad.</p>
+    </section>
+    
+    <!-- Catálogo de Videojuegos -->
+    <div id="catalog-section" style="display: none;">
+        <header>
+            <h1>Catálogo de Videojuegos</h1>
+            <form id="search-form">
+                <input type="text" placeholder="Buscar juegos..." id="search-bar">
+                <button type="submit">Buscar</button>
+            </form>
+        </header>
+
+        <section id="filters">
+            <div class="filter">
+                <label for="genre">Género:</label>
+                <select id="genre">
+                    <option value="all">Todos</option>
+                    <option value="action">Acción</option>
+                    <option value="adventure">Aventura</option>
+                    <option value="rpg">RPG</option>
+                    <option value="strategy">Estrategia</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="platform">Plataforma:</label>
+                <select id="platform">
+                    <option value="all">Todas</option>
+                    <option value="pc">PC</option>
+                    <option value="playstation">PlayStation</option>
+                    <option value="xbox">Xbox</option>
+                    <option value="switch">Nintendo Switch</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="game-catalog">
+            <div class="game-item">
+                <img src="https://media.vandal.net/m/42944/red-dead-redemption-2-2019101812583956_1.jpg" alt="Game Cover" width="200" height="200">
+                <h3>RED DEAD REDEMPTION</h3>
+                <h4>Precio: 280.000$</h4>
+                <p class="availability">Disponibilidad: Disponible</p>
+                <button>Comprar</button>
+            </div>
+            <div class="game-item">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_616x353.jpg?t=1723160896" alt="Game Cover" width="200" height="200">
+                <h3>FORZA HORIZON 5</h3>
+                <h4>Precio: 250.000$</h4>
+                <p class="availability">Disponibilidad: Agotado</p>
+                <button disabled>Comprar</button>
+            </div>
+            <div class="game-item">
+                <img src="https://ccdn.g-portal.com/medium_header_cover_RUS_Tconsole_a048c667ac.jpg" alt="Game Cover" width="200" height="200">
+                <h3>RUST</h3>
+                <h4>Precio: 100.000$</h4>
+                <p class="availability">Disponibilidad: Disponible</p>
+                <button>Comprar</button>
+            </div>
+            <div class="game-item">
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg" alt="Game Cover" width="200" height="200">
+                <h3>LEAGUE OF LEGENDS</h3>
+                <h4>Precio: gratis</h4>
+                <p class="availability">Disponibilidad: Disponible</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+
+        <!-- Nueva sección de Recompensas y Promociones -->
+        <section id="rewards-section">
+            <h2>Recompensas y Promociones</h2>
+            <div class="reward-item">
+                <h3>10% de Descuento en tu Primera Compra</h3>
+                <p>Regístrate y obtén un 10% de descuento en tu primera compra.</p>
+            </div>
+
+            <div class="reward-item">
+                <h3>Programa de Puntos de Fidelidad</h3>
+                <p>Acumula puntos con cada compra y canjéalos por descuentos en futuras compras.</p>
+            </div>
+
+            <div class="reward-item">
+                <h3>Ofertas Especiales Semanales</h3>
+                <p>Consulta nuestras ofertas especiales cada semana y ahorra en tus juegos favoritos.</p>
+            </div>
+            <div class="reward-item">
+                <h3>Promoción de Recomendación</h3>
+                <p>Recomienda a un amigo y recibe un cupón de descuento en tu próxima compra.</p>
+            </div>
+        </section>
+
+        <section id="contacto" style="display: none;">
+            <h2>Contacto</h2>
+            <p>Correo: info@gameconectshop.com</p>
+            <p>Teléfono: +123 456 789</p>
+            <p>Facebook: <a href="https://facebook.com/gameconectshop" target="_blank">facebook.com/gameconectshop</a></p>
+            <p>Dirección: Calle 123, Ciudad, País</p>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 gameconnect. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        function login() {
+            // Simulación de inicio de sesión
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "usuario" && password === "1234") {  // Puedes cambiar esta condición según necesites
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('inicio').style.display = 'block';
+                document.getElementById('catalog-section').style.display = 'block';
+                document.getElementById('sobre-nosotros').style.display = 'block';
+                document.getElementById('contacto').style.display = 'block';
+            } else {
+                alert('Usuario o contraseña incorrectos');
+            }
+        }
+    </script>
+</body>
+</html>
